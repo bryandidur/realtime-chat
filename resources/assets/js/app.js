@@ -1,18 +1,17 @@
-import Echo from 'laravel-echo'
+require('./bootstrap.js');
 
-window.Pusher = require('pusher-js');
+import Chat from './chat';
 
-window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: '2b4b1682b843f88ca07c',
-    cluster: 'us2',
-    encrypted: true
-});
+/*
+|---------------------------------------
+| Simple route system
+|---------------------------------------
+|
+ */
+var route = $(location).attr('pathname');
 
-// jQuery AJAX setup
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-        'X-Requested-With': 'XMLHttpRequest'
-    }
-});
+switch (route) {
+    case '/':
+        Chat();
+    break;
+}

@@ -7,6 +7,27 @@
     <title>Realtime Chat</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+    .chat-panel ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .chat-panel ul li {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+    .chat-panel .chat-body p {
+        margin: 0;
+        color: #777777;
+    }
+    .chat-panel {
+        overflow-y: scroll;
+        min-height: 100px;
+        max-height: 350px;
+    }
+    </style>
 </head>
 <body>
     <div>
